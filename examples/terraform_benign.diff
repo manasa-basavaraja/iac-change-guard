@@ -1,0 +1,10 @@
+diff --git a/infra/main.tf b/infra/main.tf
+--- a/infra/main.tf
++++ b/infra/main.tf
+@@ -1,5 +1,6 @@
+ resource "aws_s3_bucket" "app_data" {
+   bucket = "company-app-data-prod"
++  versioning {
++    enabled = true
++  }
+ }

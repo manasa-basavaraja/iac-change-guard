@@ -1,0 +1,11 @@
+diff --git a/infra/sg.tf b/infra/sg.tf
+--- a/infra/sg.tf
++++ b/infra/sg.tf
+@@ -10,6 +10,10 @@ resource "aws_security_group" "web" {
+   ingress {
+     from_port   = 22
+     to_port     = 22
+     protocol    = "tcp"
++    cidr_blocks = ["0.0.0.0/0"]
+   }
+ }

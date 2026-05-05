@@ -1,0 +1,23 @@
+model:
+  ast_hidden_dim: 256
+  ast_message_passing_layers: 3
+  fusion_heads: 8
+  classifier_dropout: 0.3
+  num_classes: 3
+
+llm:
+  model_name: distilbert-base-uncased
+  max_length: 512
+
+inference:
+  risk_threshold: 0.72
+  class_names:
+    - benign
+    - misconfiguration
+    - malicious
+
+training:
+  learning_rate: 2.0e-5
+  batch_size: 4
+  max_epochs: 10
+  early_stopping_patience: 3

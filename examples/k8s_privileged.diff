@@ -1,0 +1,10 @@
+diff --git a/k8s/deployment.yaml b/k8s/deployment.yaml
+--- a/k8s/deployment.yaml
++++ b/k8s/deployment.yaml
+@@ -12,6 +12,9 @@ spec:
+       containers:
+       - name: app
+         image: myorg/app:1.2.3
++        securityContext:
++          privileged: true
++          runAsUser: 0
